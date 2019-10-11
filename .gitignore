@@ -1,0 +1,6 @@
+.idea/
+vendor/
+tests/_data/*
+tests/_output/debug/*.html
+tests/_output/*.html
+tests/_support/_generated/*
