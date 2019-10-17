@@ -8,6 +8,6 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://codeception.loc/
+            url: http://codeception.loc
         - \Helper\Acceptance
     step_decorators: ~        
