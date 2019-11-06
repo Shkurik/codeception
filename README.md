@@ -25,7 +25,7 @@ codeception.yml - конфигурационный файл
 php vendor/bin/codecept generate:cest acceptance First
 
 получим ответ
-Test was created in /home/shkurik/www/codeception.loc/tests/acceptance/FirstCest.php
+Test was created in /tests/acceptance/FirstCest.php
 
 4. Configure Acceptance Tests
 actor: AcceptanceTester
@@ -50,8 +50,6 @@ class FirstCest
 6. Run!
 php vendor/bin/codecept run --steps
 
-java -jar "/path/to/selenium-server-standalone-xxx.jar"
-
 ------------
 УСТАНОВКА SELENIUM В LINUX
 1. УСТАНОВКА JAVA
@@ -69,4 +67,5 @@ sudo chmod +x /usr/local/bin/geckodriver
 
 3. УСТАНОВКА SELENIUM
 wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-java -jar selenium-server-standalone-3.141.59.jar -port 9515
+sudo chmod +x selenium-server-standalone-3.141.59.jar
+java -jar selenium-server-standalone-3.141.59.jar
