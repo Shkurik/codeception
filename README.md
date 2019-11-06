@@ -49,3 +49,24 @@ class FirstCest
 
 6. Run!
 php vendor/bin/codecept run --steps
+
+java -jar "/path/to/selenium-server-standalone-xxx.jar"
+
+------------
+УСТАНОВКА SELENIUM В LINUX
+1. УСТАНОВКА JAVA
+sudo apt install openjdk-8-jre
+
+2. УСТАНОВКА БРАУЗЕРОВ И ДРАЙВЕРОВ
+sudo apt install firefox chromium-browser
+wget https://chromedriver.storage.googleapis.com/76.0.3809.68/chromedriver_linux64.zip
+sudo mv chromedriver /usr/local/bin/chromedriver
+sudo chown root:root /usr/local/bin/chromedriver
+sudo chmod +x /usr/local/bin/chromedriver
+sudo mv geckodriver /usr/local/bin/geckodriver
+sudo chown root:root /usr/local/bin/geckodriver
+sudo chmod +x /usr/local/bin/geckodriver
+
+3. УСТАНОВКА SELENIUM
+wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+java -jar selenium-server-standalone-3.141.59.jar -port 9515
