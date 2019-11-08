@@ -16,16 +16,19 @@ class ShopCest
         $I->click('.rc-qty-plus');
         $I->click('.single_add_to_cart_button');
         $price = str_replace('$', '', $I->grabTextFrom(".price .woocommerce-Price-amount")) * 1;
-        print_r($price);
         $I->wait(2);
         $I->see('SUBTOTAL','span');
-        $I->amOnPage("/checkout/");
+        $I->click('checkout');
         $total = str_replace('$', '', $I->grabTextFrom(".order-total .woocommerce-Price-amount")) * 1;
-        print_r($price);
-        print_r($total);
         if ($total < $price) {
             $I->customAssertion("Total price is invalid");
             $I->makeHtmlSnapshot();
         }
     }
+
+//    public function freeCheckout(AcceptanceTester $I){
+//        $this->addToCard($I);
+//        $I->amOnPage('/');
+//        zero-m9tmFA
+//    }
 }
